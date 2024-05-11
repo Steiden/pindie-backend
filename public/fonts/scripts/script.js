@@ -45,6 +45,7 @@ export async function reload(blockName) {
 
 async function loadGamesBlock() {
   gamesState = await getData("/api/games");
+  if (!document.querySelector(".games-list")) return;
   document.querySelector(".games-list").innerHTML = "";
   renderGames(gamesState);
   addGamesEditModeListeners();
@@ -54,6 +55,7 @@ async function loadGamesBlock() {
 
 async function loadUsersBlock() {
   usersState = await getData("/api/users");
+  if (!document.querySelector(".users-list")) return;
   document.querySelector(".users-list").innerHTML = "";
   renderUsersList(usersState);
   addUsersEditModeListeners();
@@ -63,6 +65,7 @@ async function loadUsersBlock() {
 
 async function loadCategoriesBlock() {
   categoriesState = await getData("/api/categories");
+  if (!document.querySelector(".categories-list")) return;
   document.querySelector(".categories-list").innerHTML = "";
   renderCategoriesList(categoriesState);
   addCategoriesEditModeListeners();

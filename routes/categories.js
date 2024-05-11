@@ -6,7 +6,7 @@ const {sendAllCategories, sendCategoryCreated, sendCategoryById, sendCategoryUpd
 categoriesRouter.get('/categories', findAllCategories, sendAllCategories);
 categoriesRouter.post('/categories', findAllCategories, checkEmptyName, checkIsCategoryExists, createCategory, sendCategoryCreated);
 categoriesRouter.get('/categories/:id', findCategoryById, sendCategoryById);
-categoriesRouter.put('/categories/:id', updateCategory, checkIsCategoryExists, sendCategoryUpdated);
+categoriesRouter.put('/categories/:id', checkEmptyName, updateCategory, sendCategoryUpdated);
 categoriesRouter.delete('/categories/:id', deleteCategory, sendCategoryDeleted);
 
 module.exports = categoriesRouter;
