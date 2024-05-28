@@ -16,7 +16,7 @@ const app = express();
 connectToDatabase();
 
 app.use(
-    cors,
+    cors(),
     cookieParser(),
     bodyParser.json(),
     pagesRouter,
