@@ -4,6 +4,7 @@ const allowedCors = [
 	"https://students-projects.ru",
 	"http://localhost:3000",
 	"http://localhost:3001",
+	"https://pindie-client.nomorepartiesco.ru",
 ];
 
 // Функция, которая принимает объекты req (информация о запросе),
